@@ -1,23 +1,22 @@
-const newRouter = require('./news')
-const siteRouter = require('./site')
+const newRouter = require('./news');
+const siteRouter = require('./site');
 
 function route(app) {
-//Routes init
-    // app.get('/', (req, res) => {
-    // res.render('home')
-    // })
+  //Routes init
+  // app.get('/', (req, res) => {
+  // res.render('home')
+  // })
 
-    // app.get('/news', (req, res) => {
-    // res.render('news')
-    // })
+  // app.get('/news', (req, res) => {
+  // res.render('news')
+  // })
 
-    app.use('/news', newRouter)
-    app.use('/', siteRouter)
+  app.use('/news', newRouter);
+  app.use('/', siteRouter);
 
-    // app.get('/search', (req, res) => {
-    // res.render('search')
-    // })
-
+  // app.get('/search', (req, res) => {
+  // res.render('search')
+  // })
 }
 
 module.exports = route;

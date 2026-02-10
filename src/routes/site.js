@@ -1,12 +1,11 @@
-const express = require('express')
-const router = express.Router()
+const express = require('express');
+const router = express.Router();
 
-const sitesController = require('../app/controllers/SitesController')
+const sitesController = require('../app/controllers/SitesController');
 
 // newsController.index
 
+router.get('/search', sitesController.show);
+router.get('/', sitesController.index);
 
-router.get('/search', sitesController.show)
-router.get('/', sitesController.index)
-
-module.exports = router
+module.exports = router;
