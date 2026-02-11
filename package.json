@@ -26,12 +26,18 @@
   "homepage": "https://github.com/tuyet22/nodejs_blog#readme",
   "lint-staged": {
     "src/**/*.{js,scss,json}": [
-      "prettier --single-quote --trailing-comma all --tab-with 4 --write"
+      "prettier --single-quote --trailing-comma all --tab-width 4 --write"
     ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "dependencies": {
     "express": "^5.2.1",
-    "express-handlebars": "^8.0.4"
+    "express-handlebars": "^8.0.4",
+    "mongoose": "^9.2.0"
   },
   "devDependencies": {
     "husky": "^9.1.7",
